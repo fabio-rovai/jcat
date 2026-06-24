@@ -18,6 +18,9 @@ classifiers = [
 ]
 dependencies = []
 
+[project.optional-dependencies]
+engine = ["open-ontologies-lite>=0.2"]
+
 [project.urls]
 Homepage = "https://jcatlabs.com"
 Demo = "https://jcatlabs.com/#demo"

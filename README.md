@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/fabio-rovai/jcatlabs/main/cat.png" alt="JCAT Labs" height="120" />
+  <img src="https://raw.githubusercontent.com/fabio-rovai/jcatlabs/main/dog.png" alt="JCAT Labs" height="120" />
 </p>
 
 <h1 align="center">JCAT</h1>
@@ -32,6 +32,15 @@ code lives here.
 ```bash
 pip install git+https://github.com/fabio-rovai/jcat
 # PyPI release (pip install jcat) coming with v0.2
+```
+
+The core (`jcat-mini`) is pure Python, **zero dependencies**, 3.9+. For real RDF validation,
+SPARQL and serving, add the engine extra, which pulls in
+[open-ontologies-lite](https://pypi.org/project/open-ontologies-lite/), an Oxigraph-backed
+RDF/OWL engine:
+
+```bash
+pip install "jcat[engine] @ git+https://github.com/fabio-rovai/jcat"
 ```
 
 No dependencies. Pure Python, 3.9+.
@@ -96,13 +105,33 @@ We never paywall the engine, the same way you never pay to run `terraform plan`.
 when you want it managed: hosted graphs, alignment across vendors and acquisitions,
 versioning and audit, SLAs. That is [Curated Cloud and Enterprise](https://jcatlabs.com/#pricing).
 
+## The engine (optional)
+
+`jcat-mini` synthesises graphs with zero dependencies. Install `jcat[engine]` to back the
+heavy operations with [open-ontologies-lite](https://pypi.org/project/open-ontologies-lite/)
+(Oxigraph):
+
+```python
+import jcat
+jcat.has_engine()                     # True when the engine is installed
+
+g.validate(mode="ontology")           # real validation: triple count, errors, lint
+g.query("SELECT (COUNT(?c) AS ?n) WHERE { ?c a owl:Class }")   # SPARQL over the graph
+g.serve()                             # serves Turtle at / and live SPARQL at /sparql
+```
+
+Without the engine these fall back gracefully and synthesis still works. This is the same
+split as the product: the free model is light and self-contained; validation, SPARQL,
+alignment and hosting at scale run on the open-ontologies engine.
+
 ## Roadmap
 
+- [x] open-ontologies-lite engine integration (validation, SPARQL, serving)
+- [x] Hugging Face model card ([jcat-mini](https://huggingface.co/fabsssss/jcat-mini))
 - [ ] PyPI release
-- [ ] SHACL shape validation in the open core
+- [ ] SHACL shape validation surfaced through `validate()`
 - [ ] Alignment between two schemes (candidate scoring + adjudication)
 - [ ] `jcat plan` / `jcat apply` diff workflow against a target graph
-- [ ] Hugging Face model card for the alignment model
 
 ## License
 

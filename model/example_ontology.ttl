@@ -1,0 +1,93 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix :     <https://jcatlabs.com/onto#> .
+
+<https://jcatlabs.com/onto> a owl:Ontology ;
+    rdfs:label "Generated ontology"@en ;
+    rdfs:comment "Synthesised by the JCAT open engine."@en .
+
+:Account a owl:Class ;
+    rdfs:label "Account"@en ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:SavingsAccount a owl:Class ;
+    rdfs:label "Savings account"@en ;
+    rdfs:subClassOf :Account ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:CurrentAccount a owl:Class ;
+    rdfs:label "Current account"@en ;
+    rdfs:subClassOf :Account ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:BusinessAccount a owl:Class ;
+    rdfs:label "Business account"@en ;
+    rdfs:subClassOf :Account ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:Customer a owl:Class ;
+    rdfs:label "Customer"@en ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:RetailCustomer a owl:Class ;
+    rdfs:label "Retail customer"@en ;
+    rdfs:subClassOf :Customer ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:CorporateCustomer a owl:Class ;
+    rdfs:label "Corporate customer"@en ;
+    rdfs:subClassOf :Customer ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:Loan a owl:Class ;
+    rdfs:label "Loan"@en ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:MortgageLoan a owl:Class ;
+    rdfs:label "Mortgage loan"@en ;
+    rdfs:subClassOf :Loan ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:PersonalLoan a owl:Class ;
+    rdfs:label "Personal loan"@en ;
+    rdfs:subClassOf :Loan ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:BusinessLoan a owl:Class ;
+    rdfs:label "Business loan"@en ;
+    rdfs:subClassOf :Loan ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:Risk a owl:Class ;
+    rdfs:label "Risk"@en ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:CreditRisk a owl:Class ;
+    rdfs:label "Credit risk"@en ;
+    rdfs:subClassOf :Risk ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:MarketRisk a owl:Class ;
+    rdfs:label "Market risk"@en ;
+    rdfs:subClassOf :Risk ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:OperationalRisk a owl:Class ;
+    rdfs:label "Operational risk"@en ;
+    rdfs:subClassOf :Risk ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:LiquidityRisk a owl:Class ;
+    rdfs:label "Liquidity risk"@en ;
+    rdfs:subClassOf :Risk ;
+    rdfs:isDefinedBy <https://jcatlabs.com/onto> .
+
+:relatedTo a owl:ObjectProperty ;
+    rdfs:label "related to"@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Account :Customer :Loan :Risk ) .
