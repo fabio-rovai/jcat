@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jcat"
+version = "0.1.0"
+description = "Knowledge-graph infrastructure as code: flat term lists into standards-compliant SKOS taxonomies and OWL ontologies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "JCAT Labs" }]
+keywords = ["ontology", "taxonomy", "knowledge-graph", "skos", "owl", "rdf", "semantic-web"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://jcatlabs.com"
+Demo = "https://jcatlabs.com/#demo"
+Source = "https://github.com/fabio-rovai/jcat"
+
+[project.scripts]
+jcat = "jcat.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["jcat"]

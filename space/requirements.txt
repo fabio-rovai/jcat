@@ -1,0 +1,2 @@
+gradio>=4.44.0
+jcat @ git+https://github.com/fabio-rovai/jcat
