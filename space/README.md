@@ -1,6 +1,6 @@
 ---
 title: JCAT Ontology Engine
-emoji: 🐕
+emoji: 🐱
 colorFrom: green
 colorTo: gray
 sdk: gradio

@@ -45,7 +45,7 @@ def run(text, mode, depth):
 
 with gr.Blocks(title="JCAT ontology engine", theme=gr.themes.Soft(primary_hue="green")) as demo:
     gr.Markdown(
-        "# 🐕 JCAT ontology engine\n"
+        "# 🐱 JCAT ontology engine\n"
         "Paste a flat list of terms. Get a standards-compliant **SKOS taxonomy** or "
         "**OWL ontology**. This is the open [`jcat`](https://github.com/fabio-rovai/jcat) "
         "engine, the same one running at [jcatlabs.com](https://jcatlabs.com). Free forever."
