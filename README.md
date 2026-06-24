@@ -9,7 +9,7 @@ Flat term lists in. Standards-compliant taxonomies and ontologies out.</p>
 <p align="center">
   <a href="https://jcatlabs.com">jcatlabs.com</a> ·
   <a href="https://jcatlabs.com/#demo">Live demo</a> ·
-  <a href="https://huggingface.co/spaces/jcatlabs/jcat">Hugging Face Space</a> ·
+  <a href="https://huggingface.co/spaces/fabsssss/jcat">Hugging Face Space</a> ·
   <a href="#license">MIT</a>
 </p>
 
@@ -24,7 +24,7 @@ taxonomy or an OWL ontology, valid against the W3C standards, ready to serve.
 The core engine is **open source and free forever.** The hard parts at enterprise scale,
 curation, alignment, hosting and governance, are the managed product at
 [jcatlabs.com](https://jcatlabs.com). The brand site is the front door; the model and the
-interactive demo live on [Hugging Face](https://huggingface.co/spaces/jcatlabs/jcat); the
+interactive demo live on [Hugging Face](https://huggingface.co/spaces/fabsssss/jcat); the
 code lives here.
 
 ## Install
