@@ -61,7 +61,7 @@ with gr.Blocks(title="JCAT ontology engine", theme=gr.themes.Soft(primary_hue="g
             btn = gr.Button("Give it a try", variant="primary")
         with gr.Column():
             tree = gr.Textbox(label="Structure", lines=10)
-            ttl = gr.Code(label="Turtle", language="shell")
+            ttl = gr.Code(label="Turtle")
     btn.click(run, [inp, mode, depth], [ttl, tree])
     demo.load(run, [inp, mode, depth], [ttl, tree])
 
