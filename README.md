@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://jcatlabs.com/dog.png" alt="JCAT Labs" height="120" />
+  <img src="https://raw.githubusercontent.com/fabio-rovai/jcatlabs/main/dog.png" alt="JCAT Labs" height="120" />
 </p>
 
 <h1 align="center">JCAT</h1>
